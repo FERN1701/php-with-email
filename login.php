@@ -3,15 +3,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login Form</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 offset-md-4 form login-form">
-                <form action="login-user.php" method="POST" autocomplete="">
+<form action="login.php" method="POST" autocomplete="">
                     <h2 class="text-center">Fayeed Electronics</h2>
                     <p class="text-center"><b>Login</b> with your registered credentials</p>
                     <?php
@@ -37,11 +33,7 @@
                     <div class="form-group">
                         <input class="form-control button" type="submit" name="login" value="Login">
                     </div>
-                    <div class="link login-link text-center">Not yet a member? <a href="signup-user.php">Signup now</a></div>
+                    <div class="link login-link text-center">Not yet a member? <a href="signup.php">Signup now</a></div>
                 </form>
-            </div>
-        </div>
-    </div>
-    
 </body>
 </html>

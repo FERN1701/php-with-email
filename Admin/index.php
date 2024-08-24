@@ -2,14 +2,16 @@
 
 <?php 
 $pass = 0;
-require_once "../controllerUserData.php";
+require_once "../central_control.php";
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 if($email != false && $password != false){
     $sql = "SELECT * FROM users WHERE email = '$email'";
-    $run_Sql = mysqli_query($con, $sql);
-    if($run_Sql){
-        $fetch_info = mysqli_fetch_assoc($run_Sql);
+    $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
+    if($stmt->execute()){
+        $fetch_info = $stmt->fetch(PDO::FETCH_ASSOC);
         $status = $fetch_info['status'];
         $code = $fetch_info['code'];
         $roles = $fetch_info['roles'];
@@ -32,5 +34,5 @@ if($email != false && $password != false){
         }
     }
 }else{
-    header('Location: ../login-user.php');
+    header('Location: ../login.php');
 }

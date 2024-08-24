@@ -1,3 +1,6 @@
 <?php 
-$con = mysqli_connect('localhost', 'root', '', 'system_database');
+$pdo = new PDO("mysql:host=localhost; dbname=system_database", "root", "");
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
 ?>

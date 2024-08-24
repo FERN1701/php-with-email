@@ -1,7 +1,7 @@
 <?php require_once "central_control.php"; ?>
 <?php
 if($_SESSION['info'] == false){
-    header('Location: login-user.php');  
+    header('Location: login.php');  
 }
 ?>
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ if($_SESSION['info'] == false){
                 <?php
             }
             ?>
-                <form action="login-user.php" method="POST">
+                <form action="login.php" method="POST">
                     <div class="form-group">
                         <input class="form-control button" type="submit" name="login-now" value="Login Now">
                     </div>
