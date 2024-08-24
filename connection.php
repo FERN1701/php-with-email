@@ -1,3 +1,3 @@
 <?php 
-$con = mysqli_connect('localhost', 'root', '', 'default_db');
+$con = mysqli_connect('localhost', 'root', '', 'system_database');
 ?>
