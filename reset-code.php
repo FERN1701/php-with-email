@@ -1,4 +1,4 @@
-<?php require_once "controllerUserData.php"; ?>
+<?php require_once "central_control.php"; ?>
 <?php 
 
 ?>
