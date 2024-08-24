@@ -4,6 +4,10 @@ $email = $_SESSION['email'];
 if($email == false){
   header('Location: login.php');
 }
+echo "<p style='display:none;'>".$_SESSION['STATUS']."</p>";
+include('./includes/alerts.php')
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

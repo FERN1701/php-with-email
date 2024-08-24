@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="vendor/sweetalert2/dist/sweetalert2.min.css">
 <?php 
 session_start();
 error_reporting(0);
@@ -53,9 +54,9 @@ $errors = array();
                                     if(!$mail->send()) { 
                                         echo 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo; 
                                     } else {
+                                        $_SESSION['STATUS'] = "ACC_SUCCESS";
                                         $_SESSION['info'] = "We've sent an OTP Code on your Gmail <i> '$email'</i> thank you. ";
-                                        echo "<script>alert('Email Reset code sent, please check your gmail ');</script>
-                                        <script>window.location.href='user-otp.php'</script>";
+                                        echo "<script>window.location.href='user-otp.php'</script>";
                                     } 
                                 } catch (Exception $e) {
                                     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
@@ -381,7 +382,7 @@ $errors = array();
                 if(isset($_POST['login-now'])){
                     header('Location: login.php');
                 }
-    
+                
         //</external control> ---------------------------------------------------------------------------------------
         //<Querriesss> ---------------------------------------------------------------------------------------------------
 
@@ -396,3 +397,4 @@ $errors = array();
 
     
 ?>
+<script src="vendor/sweetalert2/dist/sweetalert2.min.js"></script>
